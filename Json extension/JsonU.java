@@ -3,7 +3,7 @@
  */
 
 
-package co.com.dendritas.JsonUtil;
+package co.com.dendritas;
 
 import android.content.Context;
 import android.util.Log;
@@ -44,8 +44,8 @@ import org.json.JSONObject;
 import org.json.XML;
 import com.google.gson.Gson;
 
-@DesignerComponent(version = Decode.VERSION,
-    description = "Jsonn Utilidad",
+@DesignerComponent(version = JsonU.VERSION,
+    description = "Json Utilidad",
     category = ComponentCategory.EXTENSION,
     nonVisible = true,
     iconName = "images/extension.png")
@@ -61,19 +61,19 @@ import com.google.gson.Gson;
 @UsesLibraries(libraries = "json.jar")
 
 
-public class Decode extends AndroidNonvisibleComponent implements Component {
+public class JsonU extends AndroidNonvisibleComponent implements Component {
     public static final int VERSION = 1;
     private ComponentContainer container;
     private Context context;
-    private static final String LOG_TAG = "Decode";
+    private static final String LOG_TAG = "JsonU";
 	
 	
 		
-	 public Decode(ComponentContainer container) {
+	 public JsonU(ComponentContainer container) {
         super(container.$form());
         this.container = container;
         context = (Context) container.$context();
-        Log.d(LOG_TAG, "Decode creado" );
+        Log.d(LOG_TAG, "JsonU Creado" );
     }
 
 
@@ -174,8 +174,6 @@ public class Decode extends AndroidNonvisibleComponent implements Component {
     return output;
 	
 }		
-
- 
 
 	
 }
